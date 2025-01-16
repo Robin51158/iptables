@@ -1,5 +1,7 @@
+#sudo nano /etc/systemd/system/fw.service
 [Unit]
-Description=Handle Iptables Firewall Rules
+Sécurité informatique 7
+Description=Add Firewall Rules to iptables
 [Service]
 Type=oneshot
 RemainAfterExit=yes
@@ -7,3 +9,5 @@ ExecStart=/etc/firewall/start.sh
 ExecStop=/etc/firewall/stop.sh
 [Install]
 WantedBy=multi-user.target
+#sudo systemctl daemon-reload
+#sudo systemctl enable fw.service
